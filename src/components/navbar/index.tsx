@@ -1,11 +1,14 @@
 import google_logo from "../../assets/google_logo.svg";
 import { NavLink } from "react-router-dom";
 import "./index.css";
-import { RiShoppingCartLine } from "react-icons/ri";
+import { RiMenuLine, RiShoppingCartLine } from "react-icons/ri";
+import { useState } from "react";
 
-const index = (data: any) => {
+const Navbar = (data: any) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="navbar">
+    <nav>
       <div>
         <a href="#">
           <img src={google_logo} alt="google_logo" />
@@ -43,8 +46,47 @@ const index = (data: any) => {
           </div>
         )}
       </div>
-    </div>
+      <div className="menu-container">
+        <RiMenuLine
+          color="white"
+          size="2.5em"
+          cursor="pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+        {menuOpen && (
+          <menu className="mobile-menu">
+            <ul>
+              <li>
+                <NavLink to="/" onClick={() => setMenuOpen(false)}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/products" onClick={() => setMenuOpen(false)}>
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </menu>
+        )}
+      </div>
+    </nav>
   );
 };
 
-export default index;
+export default Navbar;
