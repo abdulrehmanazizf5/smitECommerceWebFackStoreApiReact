@@ -45,45 +45,45 @@ const Navbar = (data: any) => {
             <button>Sign Up</button>
           </div>
         )}
-      </div>
-      <div className="menu-container">
-        <RiMenuLine
-          color="white"
-          size="2.5em"
-          cursor="pointer"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-        {menuOpen && (
-          <menu className="mobile-menu">
-            <ul>
-              <li>
-                <NavLink to="/" onClick={() => setMenuOpen(false)}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/products" onClick={() => setMenuOpen(false)}>
-                  Products
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/services" onClick={() => setMenuOpen(false)}>
-                  Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
-          </menu>
-        )}
+        <div className="menu-container">
+          <RiMenuLine
+            color="white"
+            size="2.5em"
+            cursor="pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+          />
+          {menuOpen && (
+            <menu className="mobile-menu">
+              <ul>
+                <li>
+                  <NavLink to="/" onClick={() => setMenuOpen(false)}>
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products" onClick={() => setMenuOpen(false)}>
+                    Products
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+                    Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+                    About
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                    Contact
+                  </NavLink>
+                </li>
+              </ul>
+            </menu>
+          )}
+        </div>
       </div>
     </nav>
   );
