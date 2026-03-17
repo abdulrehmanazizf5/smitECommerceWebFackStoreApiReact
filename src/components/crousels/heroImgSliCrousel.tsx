@@ -35,7 +35,7 @@ const index = () => {
           background: "rgba(0, 0, 0, 0)",
           border: "none",
           outline: "none",
-          transition: "all 0.3s ease-in-out",
+          transition: "all 0.5s ease-in-out",
         }}
       >
         ◀
@@ -58,7 +58,7 @@ const index = () => {
           background: "rgba(0, 0, 0, 0)",
           border: "none",
           outline: "none",
-          transition: "all 0.3s ease-in-out",
+          transition: "all 0.5s ease-in-out",
         }}
       >
         ▶
