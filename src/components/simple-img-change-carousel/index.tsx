@@ -10,7 +10,14 @@ const index = ({ images }: { images: string[] }) => {
     setCurrent((current + 1) % images.length);
   };
   return (
-    <div style={{ position: "relative", width: "100%", zIndex: 0 }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        zIndex: 0,
+        backgroundColor: "black",
+      }}
+    >
       {/* Sirf current image dikhao */}
       <img src={images[current]} style={{ width: "100%" }} />
 

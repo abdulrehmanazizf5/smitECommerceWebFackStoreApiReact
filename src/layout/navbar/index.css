@@ -12,7 +12,8 @@ nav {
   background-color: #6e1111;
   padding: 1em 1rem;
   animation: anime 0.5s ease forwards;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 @keyframes anime {
