@@ -1,6 +1,6 @@
 import Navbar from "../../layout/navbar";
 import HeroSecCrousel from "./hero-sec-crousel/";
-import ProductCard from "../../components/product-card";
+import Products from "./products";
 import Footer from "../../layout/footer";
 
 const index = () => {
@@ -10,7 +10,7 @@ const index = () => {
         style={{ position: "fixed", width: "100%", top: 0, zIndex: 1000 }}
       />
       <HeroSecCrousel />
-      <ProductCard />
+      <Products />
       <Footer />
     </>
   );

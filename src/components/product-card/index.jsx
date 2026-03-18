@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = () => {
+const index = ({ title, rating, price, image }) => {
   return (
     <div
       style={{
@@ -20,8 +20,8 @@ const index = () => {
       }}
     >
       <img
-        src="https://www.pictureperfectphoto.co.uk/wp-content/uploads/2020/11/creative-product-shoot.jpg"
-        alt=""
+        src={image && image}
+        alt={title && title}
         style={{ width: "100%", height: "100%" }}
       />
       <h1
@@ -30,8 +30,16 @@ const index = () => {
           fontWeight: "bold",
         }}
       >
-        Product Name
+        {title && title}
       </h1>
+      <h3
+        style={{
+          fontSize: "1rem",
+          color: "gray",
+        }}
+      >
+        {rating && `Rating: ${rating.rate} (${rating.count} reviews)`}
+      </h3>
       <div
         style={{
           display: "flex",
@@ -45,7 +53,7 @@ const index = () => {
             color: "gray",
           }}
         >
-          price: $100
+          {price && `price: $${price}`}
         </p>
         <button
           style={{
