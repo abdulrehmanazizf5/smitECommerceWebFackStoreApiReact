@@ -1,9 +1,10 @@
-import Public from "./layout/public";
+import Home from "./pages/home";
+import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
-    <div>
-      <Public />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 };
 

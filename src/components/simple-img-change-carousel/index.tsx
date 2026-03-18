@@ -1,10 +1,6 @@
 import { useState } from "react";
-const images = [
-  "https://picsum.photos/500/300?random=1",
-  "https://picsum.photos/500/300?random=2",
-  "https://picsum.photos/500/300?random=3",
-];
-const index = () => {
+
+const index = ({ images }: { images: string[] }) => {
   const [current, setCurrent] = useState(0);
   const prevSlide = () => {
     setCurrent((current - 1 + images.length) % images.length);

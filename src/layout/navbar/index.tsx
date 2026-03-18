@@ -38,13 +38,6 @@ const Navbar = (data: any) => {
           <span className="cart-number">0</span>
           <RiShoppingCartLine color="white" size="2.5em" />
         </div>
-
-        {data.login && (
-          <div className="navbar-ls-buttons">
-            <button>Sign In</button>
-            <button>Sign Up</button>
-          </div>
-        )}
         <div className="menu-container">
           <RiMenuLine
             color="white"
@@ -84,6 +77,12 @@ const Navbar = (data: any) => {
             </menu>
           )}
         </div>
+        {!data.login && (
+          <div className="navbar-ls-buttons">
+            <button>Sign In</button>
+            <button>Sign Up</button>
+          </div>
+        )}
       </div>
     </nav>
   );

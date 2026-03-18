@@ -123,8 +123,8 @@ nav ul li a:hover::after {
 }
 .mobile-menu {
   position: fixed;
-  top: 60px;
-  right: 20px;
+  top: 100px;
+  right: 15px;
   background-color: #6e1111;
   list-style: none;
   padding: 10px;
@@ -150,4 +150,20 @@ nav ul li a:hover::after {
   align-items: center;
   list-style: none;
   gap: 5px;
+}
+@media (max-width: 850px) {
+  nav ul {
+    display: none;
+  }
+  .menu-container {
+    display: block;
+  }
+}
+@media (min-width: 850px) {
+  nav ul {
+    display: flex;
+  }
+  .menu-container {
+    display: none;
+  }
 }
