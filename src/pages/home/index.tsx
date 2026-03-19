@@ -6,12 +6,18 @@ import Footer from "../../layout/footer";
 const index = () => {
   return (
     <>
-      <Navbar
-        style={{ position: "fixed", width: "100%", top: 0, zIndex: 1000 }}
-      />
-      <HeroSecCrousel />
+      <header>
+        <nav>
+          <Navbar
+            style={{ position: "fixed", width: "100%", top: 0, zIndex: 1000 }}
+          />
+        </nav>
+        <HeroSecCrousel />
+      </header>
       <Products />
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

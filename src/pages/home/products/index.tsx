@@ -13,12 +13,12 @@ const index = () => {
   return (
     <div
       style={{
-        // Mobile par 2 columns aur desktop par auto (3-4) columns
-        columnCount: window.innerWidth < 600 ? 2 : "auto",
-        columnWidth: window.innerWidth < 600 ? "160px" : "250px",
-        columnGap: "10px", // Mobile par gap thoda kam rakhein
+        position: "relative",
+        columnCount: window.innerWidth < 600 ? 3 : "auto",
+        columnWidth: window.innerWidth < 600 ? "100px" : "150px",
+        columnGap: "10px",
         padding: "10px",
-        maxWidth: "1200px",
+        maxWidth: window.innerWidth < 900 ? "100%" : "1200px",
         margin: "0 auto",
       }}
     >

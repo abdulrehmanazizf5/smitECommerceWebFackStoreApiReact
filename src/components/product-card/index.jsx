@@ -6,10 +6,9 @@ const index = ({ title, rating, price, image }) => {
     <div
       style={{
         border: "1px solid #ddd",
-        borderRadius: "16px", // Card ke corners round
-        overflow: "hidden", // Image ko round corners ke andar rakhne ke liye
+        overflow: "hidden",
         backgroundColor: "#fff",
-        marginBottom: "15px", // Har card ke niche thoda gap
+        marginBottom: "15px",
       }}
     >
       {/* Image Styling */}
@@ -46,7 +45,6 @@ const index = ({ title, rating, price, image }) => {
               color: "white",
               border: "none",
               padding: "5px 10px",
-              borderRadius: "5px",
               cursor: "pointer",
             }}
           >

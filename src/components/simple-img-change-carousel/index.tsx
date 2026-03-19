@@ -25,8 +25,11 @@ const index = ({ images }: { images: string[] }) => {
       <button
         onClick={prevSlide}
         style={{
-          paddingRight: "300px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "start",
           position: "absolute",
+          paddingLeft: "10px",
           left: 0,
           width: "50%",
           height: "100%",
@@ -48,7 +51,10 @@ const index = ({ images }: { images: string[] }) => {
       <button
         onClick={nextSlide}
         style={{
-          paddingLeft: "300px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "end",
+          paddingRight: "10px",
           width: "50%",
           height: "100%",
           position: "absolute",
