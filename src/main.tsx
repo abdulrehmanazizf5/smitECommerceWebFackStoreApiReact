@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from "./pages/home";
 import Product from "./pages/product";
-import { useParams } from "react-router";
+import { CartProvider } from "./contexts/cart";
 
 const router = createBrowserRouter([
   {
@@ -16,5 +16,7 @@ const router = createBrowserRouter([
   },
 ]);
 createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />,
+  <CartProvider>
+    <RouterProvider router={router} />
+  </CartProvider>,
 );

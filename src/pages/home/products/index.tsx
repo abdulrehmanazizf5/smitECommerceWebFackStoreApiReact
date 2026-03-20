@@ -28,16 +28,13 @@ const index = () => {
       }}
     >
       {products.products.map((product: any, idx: number) => (
-        <div
-          key={idx}
-          style={{ breakInside: "avoid", marginBottom: "10px" }}
-          onClick={() => handleClick(product.id)}
-        >
+        <div key={idx} style={{ breakInside: "avoid", marginBottom: "10px" }}>
           <ProductCard
             title={product.title}
             rating={product.rating}
             price={product.price}
             image={product.image}
+            id={product.id}
           />
         </div>
       ))}

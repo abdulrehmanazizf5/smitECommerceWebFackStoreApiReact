@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import "./index.css";
 import { RiMenuLine, RiShoppingCartLine } from "react-icons/ri";
 import { useState } from "react";
+import { useCart } from "../../contexts/cart";
 
 const Navbar = (data: any) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { quantity }: any = useCart();
   return (
     <nav>
       <div>
@@ -35,7 +36,7 @@ const Navbar = (data: any) => {
       </div>
       <div className="navbar-right">
         <div className="cart">
-          <span className="cart-number">0</span>
+          <span className="cart-number">{quantity}</span>
           <RiShoppingCartLine color="white" size="2.5em" />
         </div>
         <div className="menu-container">

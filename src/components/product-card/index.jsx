@@ -1,4 +1,6 @@
-const index = ({ title, rating, price, image }) => {
+import { useCart } from "../../contexts/cart";
+const index = ({ title, rating, price, image, id }) => {
+  const { addToCart } = useCart();
   return (
     // ProductCard Component ke andar
     <div
@@ -45,6 +47,7 @@ const index = ({ title, rating, price, image }) => {
               padding: "5px 10px",
               cursor: "pointer",
             }}
+            onClick={() => addToCart(id)}
           >
             Add
           </button>
