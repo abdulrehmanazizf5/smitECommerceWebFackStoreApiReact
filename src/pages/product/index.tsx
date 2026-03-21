@@ -22,9 +22,7 @@ const Product = () => {
 
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+      <Nav />
       <main>
         <div className="product-container">
           <img
