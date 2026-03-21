@@ -33,7 +33,12 @@ const Product = () => {
           <div className="product-details">
             <h1 className="product-title">{product.title}</h1>
             <p className="product-description">{product.description}</p>
-            <AddToCartButton id={product.id} />
+            <AddToCartButton
+              id={product.id}
+              sizeOnHover="1.02"
+              width="100%"
+              height="100%"
+            />
             <p className="product-price">{product.price}$</p>
             <p className="product-rating">
               Rating: {product.rating.rate} (

@@ -1,5 +1,5 @@
 import AddToCartButton from "../buttons/add-to-cart";
-const index = ({ title, rating, price, image, id }) => {
+const index = ({ title, rating, price, image, id }: any) => {
   return (
     // ProductCard Component ke andar
     <div
@@ -32,22 +32,24 @@ const index = ({ title, rating, price, image, id }) => {
         <div
           style={{
             display: "flex",
+            flexDirection: window.innerWidth < 600 ? "column" : "row",
             justifyContent: "space-between",
             alignItems: "center",
+            gap: "10px",
             marginTop: "10px",
           }}
         >
           <span style={{ fontWeight: "bold" }}>${price}</span>
           <AddToCartButton
             id={id}
-            width="70px"
+            width="100%"
             height="25px"
             border="none"
             borderRadius="5px"
             padding="0px 5px"
-            backgroundColor="red"
+            backgroundColor="#ff8800ff"
             color="white"
-            size="10px"
+            size="15px"
           />
         </div>
       </div>

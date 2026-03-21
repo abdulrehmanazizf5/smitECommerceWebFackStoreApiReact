@@ -1,4 +1,5 @@
 import { useCart } from "../../../contexts/cart";
+import { FaCartPlus } from "react-icons/fa6";
 
 const AddToCartButton = ({
   id,
@@ -15,6 +16,7 @@ const AddToCartButton = ({
   border,
   borderRadius,
   padding,
+  sizeOnHover,
 }: {
   id: number;
   width?: string;
@@ -30,6 +32,7 @@ const AddToCartButton = ({
   border?: string;
   borderRadius?: string;
   padding?: string;
+  sizeOnHover?: string;
 }) => {
   const { addToCart }: any = useCart();
 
@@ -49,13 +52,24 @@ const AddToCartButton = ({
           margin ||
           `${marginTop} ${marginRight} ${marginBottom} ${marginLeft}` ||
           "0",
+        transition: "all 0.3s ease",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "5px",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.scale = sizeOnHover || "1.1";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.scale = "1";
       }}
       onClick={(e) => {
         addToCart(id);
         e.stopPropagation();
       }}
     >
-      Add to Cart
+      Add To <FaCartPlus size={size} />
     </button>
   );
 };
