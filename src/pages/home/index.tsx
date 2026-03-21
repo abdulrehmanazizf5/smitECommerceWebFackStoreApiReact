@@ -1,6 +1,6 @@
 import Nav from "../../layout/navbar";
-import HeroSecCrousel from "./hero-sec-crousel/";
-import Products from "./products";
+import HeroSecCrousel from "../../layout/sections/hero-sec-crousel";
+import Products from "../../layout/sections/products";
 import Footer from "../../layout/footer";
 
 const index = () => {

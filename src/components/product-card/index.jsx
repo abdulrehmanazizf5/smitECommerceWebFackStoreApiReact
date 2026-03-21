@@ -1,6 +1,5 @@
-import { useCart } from "../../contexts/cart";
+import AddToCartButton from "../buttons/add-to-cart";
 const index = ({ title, rating, price, image, id }) => {
-  const { addToCart } = useCart();
   return (
     // ProductCard Component ke andar
     <div
@@ -39,18 +38,17 @@ const index = ({ title, rating, price, image, id }) => {
           }}
         >
           <span style={{ fontWeight: "bold" }}>${price}</span>
-          <button
-            style={{
-              backgroundColor: "red",
-              color: "white",
-              border: "none",
-              padding: "5px 10px",
-              cursor: "pointer",
-            }}
-            onClick={() => addToCart(id)}
-          >
-            Add
-          </button>
+          <AddToCartButton
+            id={id}
+            width="70px"
+            height="25px"
+            border="none"
+            borderRadius="5px"
+            padding="0px 5px"
+            backgroundColor="red"
+            color="white"
+            size="10px"
+          />
         </div>
       </div>
     </div>
