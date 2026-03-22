@@ -27,7 +27,7 @@ nav {
   }
 }
 nav img {
-  width: 150px;
+  width: 100px;
 }
 nav ul {
   display: flex;
@@ -78,16 +78,26 @@ nav ul li a:hover::after {
   border-radius: 5px;
   font-size: 1em;
 }
+.navbar-ls-buttons button:first-child {
+  border-right: 1px solid white;
+}
+.navbar-ls-buttons button:last-child {
+  border-left: 1px solid white;
+}
 .navbar-ls-buttons button {
-  padding: 10px;
-  border: 1px solid white;
+  padding: 8px;
+  border: none;
   background-color: #ffffff00;
   color: white;
   transition: all 0.3s ease-in-out 0.2s;
 }
 .navbar-ls-buttons button:hover {
-  font-size: 1.2em;
-  padding: -10px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  color: #6e1111;
+  scale: 1.1;
   cursor: pointer;
 }
 .navbar-right {
@@ -166,5 +176,34 @@ nav ul li a:hover::after {
   }
   .menu-container {
     display: none;
+  }
+}
+@media (max-width: 500px) {
+  .navbar-ls-buttons {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .navbar-ls-buttons button {
+    font-size: 0.8em;
+    padding: 4px 10px;
+  }
+  .navbar-ls-buttons button:first-child {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+  .navbar-ls-buttons button:last-child {
+    border-left: none;
+    border-top: 1px solid white;
+  }
+  .navbar-ls-buttons button:hover {
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    background-color: #fff;
+    color: #6e1111;
+    scale: 1.1;
+  }
+  .navbar-right {
+    gap: 0.2em;
   }
 }
