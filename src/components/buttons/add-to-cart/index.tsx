@@ -17,6 +17,7 @@ const AddToCartButton = ({
   borderRadius,
   padding,
   sizeOnHover,
+  fontWeight,
 }: {
   id: number;
   width?: string;
@@ -33,6 +34,7 @@ const AddToCartButton = ({
   borderRadius?: string;
   padding?: string;
   sizeOnHover?: string;
+  fontWeight?: string;
 }) => {
   const { addToCart }: any = useCart();
 
@@ -57,6 +59,7 @@ const AddToCartButton = ({
         alignItems: "center",
         justifyContent: "center",
         gap: "5px",
+        fontWeight: fontWeight || "normal",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.scale = sizeOnHover || "1.1";

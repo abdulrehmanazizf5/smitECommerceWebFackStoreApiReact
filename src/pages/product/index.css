@@ -2,70 +2,80 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 .product-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
   display: flex;
   flex-direction: row;
-  align-items: start;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5%;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
 }
 .product-image {
-  width: 100%;
-  background-color: aliceblue;
-  padding: 10px;
+  max-width: 100%;
+  border: 5px solid #ddd;
+  height: auto;
   border-radius: 10px;
 }
 .product-details {
-  padding-top: 50px;
-  max-width: 50%;
+  height: 100%;
+  width: 100%;
+  min-width: 20em;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 10px;
 }
 .product-title {
-  font-size: 3em;
+  margin-bottom: 30px;
+  font-size: 2em;
   font-weight: bold;
 }
 .product-description {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1.2em;
 }
 .product-price {
-  margin-top: 200px;
-  color: green;
-  font-weight: bold;
-  font-size: 4em;
-  align-self: center;
-}
-.product-rating {
-  align-self: center;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1.5em;
   font-weight: bold;
 }
+.product-rating {
+  font-size: 1.2em;
+}
 .product-raters-count {
-  color: green;
-  font-size: 0.8em;
-}
-.product-container main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.product-container main img {
-  width: 200px;
-  height: 200px;
-}
-.product-container main h1 {
-  font-size: 20px;
-  font-weight: bold;
-}
-.product-container main p {
   font-size: 1em;
+}
+@media (max-width: 53em) {
+  .product-container {
+    min-width: 100%;
+    gap: 2em;
+    flex-direction: column;
+  }
+  .product-details {
+    width: 100%;
+  }
+  .product-image {
+    max-width: 80%;
+  }
+  .product-title {
+    font-size: 1.5em;
+  }
+  .product-description {
+    font-size: 1em;
+  }
+  .product-price {
+    font-size: 1.2em;
+  }
+  .product-rating {
+    font-size: 1em;
+  }
+  .product-raters-count {
+    font-size: 0.8em;
+  }
 }

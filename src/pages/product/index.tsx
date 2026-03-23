@@ -1,4 +1,3 @@
-import Footer from "../../layout/footer";
 import Nav from "../../layout/navbar";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
@@ -32,14 +31,6 @@ const Product = () => {
           />
           <div className="product-details">
             <h1 className="product-title">{product.title}</h1>
-            <p className="product-description">{product.description}</p>
-            <AddToCartButton
-              id={product.id}
-              sizeOnHover="1.02"
-              width="100%"
-              height="100%"
-            />
-            <p className="product-price">{product.price}$</p>
             <p className="product-rating">
               Rating: {product.rating.rate} (
               <span className="product-raters-count">
@@ -47,12 +38,21 @@ const Product = () => {
               </span>
               )
             </p>
+            <p className="product-price">Price: {product.price}$</p>
+            <AddToCartButton
+              id={product.id}
+              sizeOnHover="1.02"
+              width="100%"
+              height="100%"
+              backgroundColor="#ff8800ff"
+            />
+            <p className="product-description">
+              <b>Description: </b>
+              {product.description}
+            </p>
           </div>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };
