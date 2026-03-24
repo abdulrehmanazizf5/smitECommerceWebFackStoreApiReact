@@ -36,13 +36,9 @@ const Navbar = (data: any) => {
         </ul>
       </div>
       <div className="navbar-right">
-        <div className="cart">
+        <div className="cart" onClick={() => navigate("/cart")}>
           <span className="cart-number">{quantity}</span>
-          <RiShoppingCartLine
-            onClick={() => navigate("/cart")}
-            color="white"
-            size="2.5em"
-          />
+          <RiShoppingCartLine color="white" size="2.5em" />
         </div>
         <div className="menu-container">
           <RiMenuLine
