@@ -81,8 +81,8 @@ const Navbar = (data: any) => {
         </div>
         {!data.login && (
           <div className="navbar-ls-buttons">
-            <button>Sign In</button>
-            <button>Sign Up</button>
+            <button onClick={() => navigate("/login")}>Sign In</button>
+            <button onClick={() => navigate("/signup")}>Sign Up</button>
           </div>
         )}
       </div>
