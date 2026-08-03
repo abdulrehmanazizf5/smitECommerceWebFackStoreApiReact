@@ -19,7 +19,7 @@ const index = () => {
           columnWidth: window.innerWidth < 600 ? "100px" : "150px",
           columnGap: "10px",
           padding: "10px",
-          maxWidth: window.innerWidth < 900 ? "100%" : "1200px",
+          maxWidth: window.innerWidth < 900 ? "100%" : "100%",
           margin: "0 auto",
         }}
       >
